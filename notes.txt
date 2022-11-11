@@ -1,0 +1,14 @@
+Part 1:
+2- xl array: doublerAppdend(2.69ms), doublerInsert(769.69ms)
+
+3- L array: doublerAppdend(402.92us), doublerInsert(6.57ms)
+
+   M array: doublerAppdend(88.21us), doublerInsert(136.88us)
+
+   S array: doublerAppdend(60.38us), doublerInsert(25.96us)
+
+   T array: doublerAppdend(44.79us), doublerInsert(14.63us)
+
+4- From looking over the results, the doublerAppend function scales much better than the doublerInsert function. doublerAppdend has a linear runtime whereas doublerInsert has an exponential runtime. You can tell that doublerAppend has a better runtime because as the array size passed in increases, it's runtime increases at a steady, linear rate, whereas the runtime for doublerInsert increases significantly more than a steady rate as the arrays get bigger.
+
+5- The doublerInsert function is so much slower because it utilizes .unshift() to add numbers to the front of the array. In doing so, it has to move all of the numbers in the array over individually in order to make room for these numbers.
